@@ -564,9 +564,9 @@
 </html>
 <script>
 	// 获取当前url地址
-	var url = "danliu.ml/?turl=atdanliu.cn";
+	var url = window.location.href;
 	// 截取传递的url参数
-	url = url.match(/tpurl=(\S*)/)[1];
+	var jumpurl = "atdanliu.cn";
 	// 获取秒数显示id
 	var seconds = document.getElementById("seconds");
 	// 设置秒数
@@ -574,7 +574,7 @@
     var timer = setInterval(function () {
         num--;
         if(num <= 0){
-			window.location.href = url;
+			window.location.href = jumpurl;
 			seconds.innerText = 0;
 		}
 		else{
